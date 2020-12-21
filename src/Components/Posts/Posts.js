@@ -2,13 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './Posts.css'
 
-function Posts() {
-    const [posts, setPosts] = useState([]);
-    useEffect(()=>{
-        axios
-        .get('http://localhost:3001/posts')
-        .then(result => setPosts(result.data))
-    }, []);
+function Posts({posts}) {
 
     return (
         <div>

@@ -1,34 +1,52 @@
 {
-    "posts": [
-        {
-            "title": "test Title",
-            "author": "test Author",
-            "description": "test description"
-        },
-        {
-            "title": "test Title2",
-            "author": "test Author2",
-            "description": "test description2"
-        },
-        {
-            "title": "test Title3",
-            "author": "test Author3",
-            "description": "test description3"
-        },
-        {
-            "title": "test Title4",
-            "author": "test Author4",
-            "description": "test description4"
-        },
-        {
-            "title": "test Title5",
-            "author": "test Author5",
-            "description": "test description5"
-        },
-        {
-            "title": "test Title6",
-            "author": "test Author6",
-            "description": "test description6"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "test Title",
+      "author": "test Author",
+      "description": "test description"
+    },
+    {
+      "id": 2,
+      "title": "test Title2",
+      "author": "test Author2",
+      "description": "test description2"
+    },
+    {
+      "id": 3,
+      "title": "test Title3",
+      "author": "test Author3",
+      "description": "test description3"
+    },
+    {
+      "id": 4,
+      "title": "test Title4",
+      "author": "test Author4",
+      "description": "test description4"
+    },
+    {
+      "id": 5,
+      "title": "test Title5",
+      "author": "test Author5",
+      "description": "test description5"
+    },
+    {
+      "id": 6,
+      "title": "test Title6",
+      "author": "test Author6",
+      "description": "test description6"
+    },
+    {
+      "title": "qwe",
+      "author": "qwe",
+      "description": "qwe",
+      "id": 7
+    },
+    {
+      "title": "lkjsdf",
+      "author": "lksjdf",
+      "description": "poihjg",
+      "id": 8
+    }
+  ]
 }
