@@ -4,8 +4,7 @@ import './AddPost.css';
 function AddPost({onChangeHandler, onSubmitHandler}) {
 
     return (
-        
-        <form onSubmit={onSubmitHandler}>
+        <form className="addPost" onSubmit={onSubmitHandler}>
         <div className="form-group">
             <label htmlFor="title">title</label>
             <input name="title" onChange={onChangeHandler} type="text" id="title"></input>
@@ -15,8 +14,8 @@ function AddPost({onChangeHandler, onSubmitHandler}) {
             <input name="author" onChange={onChangeHandler} type="text" id="author"></input>
         </div>
         <div className="form-group">
-            <label htmlFor="description">Author</label>
-            <input name="description" onChange={onChangeHandler} type="text" id="description"></input> 
+            <label htmlFor="description">Description</label>
+            <textarea name="description" onChange={onChangeHandler} type="text" id="description" rows="10" cols="50"></textarea> 
             <button type="submit">Submit</button>
         </div>
             

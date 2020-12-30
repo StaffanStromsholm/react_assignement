@@ -1,0 +1,14 @@
+.header {
+    color: red;
+}
+
+nav {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-brand a, .nav-link a {
+    color: white;
+}
