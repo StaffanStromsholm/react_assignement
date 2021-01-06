@@ -1,0 +1,11 @@
+.posts {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    flex: 1 auto !important;
+}

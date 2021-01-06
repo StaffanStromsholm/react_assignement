@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Header() {
     return (
         <Navbar className="navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand><Link to="/">Blog</Link></Navbar.Brand>
+            <Navbar.Brand><Link to="/posts">Blog</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">

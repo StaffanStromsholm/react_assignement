@@ -14,6 +14,10 @@ function AddPost({onChangeHandler, onSubmitHandler}) {
             <input name="author" onChange={onChangeHandler} type="text" id="author"></input>
         </div>
         <div className="form-group">
+            <label htmlFor="imgUrl">Image url</label>
+            <input name="imgUrl" onChange={onChangeHandler} type="text" id="imgUrl"></input>
+        </div>
+        <div className="form-group">
             <label htmlFor="description">Description</label>
             <textarea name="description" onChange={onChangeHandler} type="text" id="description" rows="10" cols="50"></textarea> 
             <button type="submit">Submit</button>
