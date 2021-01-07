@@ -1,19 +1,38 @@
-// import React, {useEffect, useState} from 'react';
-// import { useRouteMatch } from 'react-router-dom';
-// import './Posts.css'
-// import BlogCard from '../BlogCard/BlogCard'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
+import './Posts.css'
 
-// function Posts({posts}) {
-//     let {url} = useRouteMatch();
+const Posts = ({posts}) => {
+    return(
+        posts.map((p) => {
+            return createBlogCard(p);
+          })
+    )
+}
 
-//     return (
-//         <div className="posts">
-//             {posts.map((post, i) => (
-//                 <BlogCard link={`${url}/${post.id}`} title={post.title} imgUrl={post.imgUrl} author={post.author} description={post.description} key={i} />
-//                 ) 
-//             )}
-//         </div>
-//     )
-// }
+const createBlogCard = (p) => {
+    return(
+        <Card className="posts-card" key={p.id}>
+          <Link to={`posts/${p.id}`}><Card.Img variant="top" src={p.imgUrl} /></Link>
+          <Card.Body>
+            <Card.Title>{p.title}</Card.Title>
+            <Card.Text>
+              {/* truncate text */}
+              {p.description.substring(0, 200)}...
+            </Card.Text>
+            <Link className="read-more" to={`posts/${p.id}`}>Read more</Link>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">Posted by {p.author}</small>
+          </Card.Footer>
+        </Card>
+      )
+}
 
-// export default Posts;
+const PostsWrappedInDiv = ({posts}) => {
+    return <div className="posts"><Posts posts={posts} /></div>
+}
+
+export default PostsWrappedInDiv;

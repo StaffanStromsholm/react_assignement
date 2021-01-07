@@ -1,0 +1,14 @@
+.posts {
+    width: 70%;
+}
+
+.read-more {
+    color: rgb(75, 58, 8);
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.posts-card {
+    margin: .5rem;
+}

@@ -6,11 +6,8 @@ import AddPost from './Components/AddPost/AddPost';
 import axios from 'axios';
 import Header from './Components/Header/Header'
 import SinglePost from './Components/SinglePost/SinglePost.js';
-import BlogCard from './Components/BlogCard/BlogCard';
-import CardDeck from 'react-bootstrap/CardDeck';
-import Card from 'react-bootstrap/Card'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Welcome from './Components/Welcome/Welcome';
+import Aside from './Components/Aside/Aside';
 
 const API = 'http://localhost:3001/posts';
 
@@ -41,6 +38,7 @@ const App = () => {
       [e.target.name]: e.target.value
     })
   }
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
@@ -51,41 +49,29 @@ const App = () => {
       .then(result => {
         setPosts(result.data);
         alert('New post was succesfully created');
-        history.push("/");
+        history.push("/posts");
       })
   }
-
-  const PostList = posts.map((p, id) => {
-    return (
-      <Card>
-        <Card.Img variant="top" src={p.imgUrl} />
-        <Card.Body>
-          <Card.Title>{p.title}</Card.Title>
-          <Card.Text>
-            {p.description}
-      </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Posted by {p.author}</small>
-        </Card.Footer>
-        
-      </Card>
-    )
-  })
 
   return (
     <div className="App">
       <Header />
 
       <Switch>
+      <Route exact path="/">
+        <Welcome />
+      </Route>
         <Route path={`/posts/:postID`}>
           <SinglePost />
+          <Aside />
         </Route>
-        <Route path="/posts" > <div className="posts" >{PostList}</div></Route>
+        <Route path="/posts" >
+          <Posts posts={posts} />
+          <Aside />
+        </Route>
         <Route path="/newpost">
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
-
       </Switch>
 
     </div>

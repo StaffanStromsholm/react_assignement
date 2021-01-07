@@ -1,0 +1,10 @@
+.Aside {
+    position: absolute;
+    width: 29%;
+    height: 100vh;
+    margin-top: 90px;
+    font-size: 1rem;
+    right: 0;
+    top: 0;
+    background-color: orange;
+}

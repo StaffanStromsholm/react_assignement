@@ -1,3 +1,8 @@
 .addPost {
     margin-top: 5rem;
+    padding: 2rem;
+}
+
+.newpost-title {
+    margin-bottom: 2rem;
 }

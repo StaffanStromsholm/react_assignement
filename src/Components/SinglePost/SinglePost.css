@@ -1,4 +1,20 @@
-.SinglePost {
-    font-size: 50px;
-    margin-top: 10rem;
+.SinglePost-container {
+    padding: 3rem;
+    display: flex;
+}
+
+.SinglePost-card {
+    margin-top: 3rem;
+}
+
+.SinglePost-img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.edit {
+    color: rgb(75, 58, 8);
+    display: inline-block;
+    width: 100%;
+    text-align: right;
 }

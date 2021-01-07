@@ -1,14 +1,19 @@
-.header {
-    color: red;
-}
-
 nav {
     position: absolute !important;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 2
+}
+
+.bg-dark {
+    background-color: rgb(75, 58, 8) !important;
 }
 
 .navbar-brand a, .nav-link a {
     color: white;
+}
+
+.nav-link a {
+    font-family: 'Josefin Slab', serif;
 }
