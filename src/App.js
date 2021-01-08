@@ -71,9 +71,8 @@ const App = () => {
       {/* passing functions as props to handle state from child component Welcome to parent Component App */}
         <Welcome loginFalseHandler={setLoggedInToFalseHandler} loginTrueHandler={setLoggedInToTrueHandler} isLoggedIn={isLoggedIn} />
       </Route>
-        <Route path={`/posts/:postID`}>
+        <Route path={`/post/:postID`}>
           <SinglePost />
-          <Aside />
         </Route>
         <Route path="/posts" >
           <Posts posts={posts} />
