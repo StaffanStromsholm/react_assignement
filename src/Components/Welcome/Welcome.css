@@ -33,10 +33,13 @@ h1::after {
     opacity: 0.7;
 }
 
-.welcome-link {
-    padding: 1rem;
+.welcome-btn {
     background-color: rgba(255, 255, 255, 0.132); 
     color: white;
+    height: 3rem;
+    border: none;
+    margin: 0 1rem;
+    padding: 0 1rem;
 }
 
 .welcome-link:hover {

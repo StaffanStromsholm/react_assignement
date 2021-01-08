@@ -12,13 +12,14 @@ import Aside from './Components/Aside/Aside';
 const API = 'http://localhost:3001/posts';
 
 const App = () => {
-
   const [post, setPost] = useState({
     title: '',
     author: '',
     imgUrl: '',
     description: ''
   })
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [posts, setPosts] = useState([]);
 
@@ -28,7 +29,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/posts')
+      .get(API)
       .then(result => setPosts(result.data))
   }, []);
 
@@ -53,13 +54,22 @@ const App = () => {
       })
   }
 
+  const setLoggedInToFalseHandler = () => {
+    setIsLoggedIn(false);
+  }
+
+  const setLoggedInToTrueHandler = () => {
+    setIsLoggedIn(true);
+  }
+
   return (
     <div className="App">
-      <Header />
+      <Header isLoggedIn={isLoggedIn} />
 
       <Switch>
       <Route exact path="/">
-        <Welcome />
+      {/* passing functions as props to handle state from child component Welcome to parent Component App */}
+        <Welcome loginFalseHandler={setLoggedInToFalseHandler} loginTrueHandler={setLoggedInToTrueHandler} isLoggedIn={isLoggedIn} />
       </Route>
         <Route path={`/posts/:postID`}>
           <SinglePost />
@@ -73,7 +83,6 @@ const App = () => {
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
-
     </div>
   );
 }
