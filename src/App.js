@@ -9,7 +9,7 @@ import SinglePost from './Components/SinglePost/SinglePost.js';
 import Welcome from './Components/Welcome/Welcome';
 import Aside from './Components/Aside/Aside';
 
-const API = 'http://localhost:3001/posts';
+const API = 'https://my-json-server.typicode.com/StaffanStromsholm/react-assignement-db/posts' || 'http://localhost:3001/posts';
 
 const App = () => {
   const [post, setPost] = useState({
