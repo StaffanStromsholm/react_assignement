@@ -15,5 +15,6 @@ nav {
 }
 
 .nav-link a {
+    font-size: 1.3rem;
     font-family: 'Josefin Slab', serif;
 }

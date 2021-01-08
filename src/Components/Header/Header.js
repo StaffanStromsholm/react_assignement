@@ -9,7 +9,7 @@ import { faParagraph } from '@fortawesome/free-solid-svg-icons'
 
 
 
-function Header({isLoggedIn}) {
+function Header({isLoggedIn, logoutHandler, loginHandler}) {
     return (
         <Navbar className="navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand><Link to="/"><FontAwesomeIcon icon={faParagraph} /></Link></Navbar.Brand>
@@ -19,6 +19,8 @@ function Header({isLoggedIn}) {
                 <Nav.Link><Link to="/posts">Blogposts</Link></Nav.Link>
                 {/* Conditional rendering */}
                 {isLoggedIn && <Nav.Link><Link to="/newpost">New Post</Link></Nav.Link>}
+                {isLoggedIn && <Nav.Link><Link onClick={logoutHandler}>Logout</Link></Nav.Link>}
+                {!isLoggedIn && <Nav.Link><Link onClick={loginHandler}>Login</Link></Nav.Link>}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

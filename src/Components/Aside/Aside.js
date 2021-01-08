@@ -85,6 +85,8 @@ const Year2021 = () => {
             </li>
         </ul>
 
+        <hr></hr>
+
         <Switch>
             <Route path={`${path}/:month`}>
                 <Month2021 />
@@ -171,6 +173,8 @@ const Year2020 = () => {
                 <Link to={`${url}/dec`}>Dec</Link>
             </li>
         </ul>
+
+        <hr></hr>
 
         <Switch>
             <Route path={`${path}/:month`}>

@@ -64,7 +64,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header isLoggedIn={isLoggedIn} />
+
+      <Header isLoggedIn={isLoggedIn} logoutHandler={setLoggedInToFalseHandler} loginHandler={setLoggedInToTrueHandler} />
 
       <Switch>
       <Route exact path="/">
@@ -82,6 +83,7 @@ const App = () => {
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
+      
     </div>
   );
 }

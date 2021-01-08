@@ -13,4 +13,14 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    padding: 1rem;
+}
+
+.Aside h2, .Aside h3 {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.5rem;  
+}
+
+.Aside a {
+    color: white;
 }

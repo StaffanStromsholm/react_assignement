@@ -134,27 +134,12 @@
       "id": 19
     },
     {
-      "title": "",
-      "author": "",
-      "imgUrl": "",
-      "description": "",
-      "id": 20
-    },
-    {
-      "title": "",
-      "author": "",
-      "imgUrl": "",
-      "description": "",
-      "": "test",
-      "id": 21
-    },
-    {
       "title": "test",
       "author": "Staffan",
       "imgUrl": "https://images.unsplash.com/photo-1455156218388-5e61b526818b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "description": "test",
       "": "test",
-      "id": 22
+      "id": 20
     }
   ]
 }
