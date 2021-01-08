@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -37,8 +37,8 @@ const Aside = () => {
                 </div>
             </Router>
         </div>
-    )
-}
+    );
+};
 
 const Year2021 = () => {
 
@@ -93,7 +93,7 @@ const Year2021 = () => {
             </Route>
         </Switch>
     </div>);
-}
+};
 
 const Month2021 = () => {
 
@@ -109,8 +109,8 @@ const Month2021 = () => {
                 <li><Link>Post 4</Link></li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
 const Month2020 = () => {
 
@@ -126,8 +126,8 @@ const Month2020 = () => {
                 <li><Link>Post 4</Link></li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
 const Year2020 = () => {
 
@@ -181,7 +181,7 @@ const Year2020 = () => {
                 <Month2020 />
             </Route>
         </Switch>
-    </div>)
-}
+    </div>);
+};
 
 export default Aside;

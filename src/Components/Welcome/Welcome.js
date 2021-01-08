@@ -14,32 +14,32 @@ const NotLoggedInGreeting = ({ isLoggedIn }) => {
 // Conditional rendering
 const Greeting = ({ isLoggedIn }) => {
     if (isLoggedIn) {
-        return <LoggedInGreeting />
+        return <LoggedInGreeting />;
     }
-    return <NotLoggedInGreeting />
+    return <NotLoggedInGreeting />;
 }
 
 const LoginButton = ({ handleLogin }) => {
     return (
         <button className="welcome-btn" onClick={handleLogin}>Login</button>
-    )
+    );
 }
 
 const LogoutButton = ({ handleLogout }) => {
     return (
         <button className="welcome-btn" onClick={handleLogout}>Logout</button>
-    )
+    );
 }
 
-const Welcome = ({ isLoggedIn, loginFalseHandler, loginTrueHandler }) => {
+const Welcome = ({ isLoggedIn, logoutHandler, loginHandler }) => {
     let button;
 
     const handleLogin = () => {
-        loginTrueHandler();
+        loginHandler();
     }
 
     const handleLogout = () => {
-        loginFalseHandler();
+        logoutHandler();
     }
 
     // conditional rendering and passing props to Component
@@ -47,7 +47,7 @@ const Welcome = ({ isLoggedIn, loginFalseHandler, loginTrueHandler }) => {
         button = <LogoutButton handleLogout={handleLogout} />;
     } else {
         button = <LoginButton handleLogin={handleLogin} />;
-    }
+    };
 
     return (
         <div className="Welcome">

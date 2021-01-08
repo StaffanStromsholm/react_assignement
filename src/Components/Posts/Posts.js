@@ -1,16 +1,15 @@
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
-import './Posts.css'
+import './Posts.css';
 
 const Posts = ({posts}) => {
     return(
         posts.map((p) => {
             return createBlogCard(p);
           })
-    )
-}
+    );
+};
 
 const createBlogCard = (p) => {
     return(
@@ -28,11 +27,11 @@ const createBlogCard = (p) => {
             <small className="text-muted">Posted by {p.author}</small>
           </Card.Footer>
         </Card>
-      )
-}
+      );
+};
 
 const PostsWrappedInDiv = ({posts}) => {
     return <div className="posts"><Posts posts={posts} /></div>
-}
+};
 
 export default PostsWrappedInDiv;

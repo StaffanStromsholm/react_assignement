@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faParagraph } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faParagraph } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -24,7 +24,7 @@ function Header({isLoggedIn, logoutHandler, loginHandler}) {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './AddPost.css';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
@@ -29,14 +30,13 @@ function AddPost({ onChangeHandler, onSubmitHandler }) {
                 <Form.Label>Text</Form.Label>
                 <Form.Control name="description" required onChange={onChangeHandler} as="textarea" rows={3} />
             </Form.Group>
-            <Button variant="primary" type="submit">
-                Add
-            </Button>
+            <Button variant="success" type="submit">Add</Button>
+            <Button variant="primary" className="new-post-back-btn" type="button"><Link to="/posts">Back</Link></Button>
 
         </Form>
         
     </div>
-    )
-}
+    );
+};
 
-export default AddPost
+export default AddPost;

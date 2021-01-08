@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Switch, Route, useHistory, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, useHistory, useRouteMatch } from 'react-router-dom';
 import './App.css';
 import Posts from './Components/Posts/Posts';
 import AddPost from './Components/AddPost/AddPost';
 import axios from 'axios';
-import Header from './Components/Header/Header'
+import Header from './Components/Header/Header';
 import SinglePost from './Components/SinglePost/SinglePost.js';
 import Welcome from './Components/Welcome/Welcome';
 import Aside from './Components/Aside/Aside';
@@ -17,15 +17,13 @@ const App = () => {
     author: '',
     imgUrl: '',
     description: ''
-  })
+  });
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const [posts, setPosts] = useState([]);
 
   const history = useHistory();
-
-  let { path, url } = useRouteMatch();
 
   useEffect(() => {
     axios
@@ -37,8 +35,8 @@ const App = () => {
     setPost({
       ...post,
       [e.target.name]: e.target.value
-    })
-  }
+    });
+  };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -51,16 +49,16 @@ const App = () => {
         setPosts(result.data);
         alert('New post was succesfully created');
         history.push("/posts");
-      })
-  }
+      });
+  };
 
   const setLoggedInToFalseHandler = () => {
     setIsLoggedIn(false);
-  }
+  };
 
   const setLoggedInToTrueHandler = () => {
     setIsLoggedIn(true);
-  }
+  };
 
   return (
     <div className="App">
@@ -70,7 +68,7 @@ const App = () => {
       <Switch>
       <Route exact path="/">
       {/* passing functions as props to handle state from child component Welcome to parent Component App */}
-        <Welcome loginFalseHandler={setLoggedInToFalseHandler} loginTrueHandler={setLoggedInToTrueHandler} isLoggedIn={isLoggedIn} />
+        <Welcome logoutHandler={setLoggedInToFalseHandler} loginHandler={setLoggedInToTrueHandler} isLoggedIn={isLoggedIn} />
       </Route>
         <Route path={`/post/:postID`}>
           <SinglePost />
@@ -83,9 +81,9 @@ const App = () => {
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
-      
+
     </div>
   );
-}
+};
 
 export default App;

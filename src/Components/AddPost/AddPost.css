@@ -6,3 +6,11 @@
 .newpost-title {
     margin-bottom: 2rem;
 }
+
+.new-post-back-btn {
+    margin-left: 1rem;
+}
+
+.new-post-back-btn a {
+    color: white;
+}

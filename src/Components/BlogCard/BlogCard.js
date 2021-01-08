@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import './BlogCard.css';
 import {Link} from 'react-router-dom';
 
 function BlogCard({title, author, imgUrl, description, link}) {
-    console.log(link);
     return (
         <div className="BlogCard">
         <img src={imgUrl}/>
@@ -12,7 +11,7 @@ function BlogCard({title, author, imgUrl, description, link}) {
             <p>{description}</p>
             <Link to={link}><button> Read More </button></Link>
         </div>
-    )
-}
+    );
+};
 
-export default BlogCard
+export default BlogCard;
