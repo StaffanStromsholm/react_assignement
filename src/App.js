@@ -9,6 +9,7 @@ import SinglePost from './Components/SinglePost/SinglePost.js';
 import Welcome from './Components/Welcome/Welcome';
 import Aside from './Components/Aside/Aside';
 
+// fetching data from fake json server hosted on typicode.com, posting to db does not work, use localhost for that
 const API = 'https://my-json-server.typicode.com/StaffanStromsholm/react-assignement-db/posts' || 'http://localhost:3001/posts';
 
 const App = () => {
