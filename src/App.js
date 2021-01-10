@@ -9,10 +9,10 @@ import SinglePost from './Components/SinglePost/SinglePost.js';
 import Welcome from './Components/Welcome/Welcome';
 import Aside from './Components/Aside/Aside';
 
-// fetching data from fake json server hosted on typicode.com, posting to db does not work, use localhost for that
-const API = 'https://my-json-server.typicode.com/StaffanStromsholm/react-assignement-db/posts';
+// fetching data from fake json server hosted on my-json-server.typicode.com, posting to this db does not work, use localhost for that
+const DB = 'https://my-json-server.typicode.com/StaffanStromsholm/react-assignement-db/posts';
 
-const localhostAPI = 'http://localhost:3001/posts';
+const localhostDB = 'http://localhost:3001/posts';
 
 const App = () => {
   const [post, setPost] = useState({
@@ -28,9 +28,11 @@ const App = () => {
 
   const history = useHistory();
 
+  let { path, url } = useRouteMatch();
+
   useEffect(() => {
     axios
-      .get(API)
+      .get(DB)
       .then(result => setPosts(result.data))
   }, []);
 
@@ -44,14 +46,14 @@ const App = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
 
-    axios.post(API, post)
+    axios.post(DB, post)
       .then(() => {
-        return axios.get(API)
+        return axios.get(DB)
       })
       .then(result => {
         setPosts(result.data);
         alert('New post was succesfully created');
-        history.push("/posts");
+        history.push("/react_assignement/posts");
       });
   };
 
@@ -69,18 +71,18 @@ const App = () => {
       <Header isLoggedIn={isLoggedIn} logoutHandler={setLoggedInToFalseHandler} loginHandler={setLoggedInToTrueHandler} />
 
       <Switch>
-      <Route exact path="/">
+      <Route exact path={`/react_assignement`}>
       {/* passing functions as props to handle state from child component Welcome to parent Component App */}
         <Welcome logoutHandler={setLoggedInToFalseHandler} loginHandler={setLoggedInToTrueHandler} isLoggedIn={isLoggedIn} />
       </Route>
-        <Route path={`/post/:postID`}>
+        <Route path={`/react_assignement/post/:postID`}>
           <SinglePost />
         </Route>
-        <Route path="/posts" >
+        <Route path={`/react_assignement/posts`} >
           <Posts posts={posts} />
           <Aside />
         </Route>
-        <Route path="/newpost">x
+        <Route path={`/react_assignement/newpost`}>x
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
