@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/staffanstromsholm.github.io/react_assignement/static/css/main.1ebe780f.chunk.css",
-    "main.js": "/staffanstromsholm.github.io/react_assignement/static/js/main.24f7e28c.chunk.js",
-    "main.js.map": "/staffanstromsholm.github.io/react_assignement/static/js/main.24f7e28c.chunk.js.map",
-    "runtime-main.js": "/staffanstromsholm.github.io/react_assignement/static/js/runtime-main.da3d1733.js",
-    "runtime-main.js.map": "/staffanstromsholm.github.io/react_assignement/static/js/runtime-main.da3d1733.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/staffanstromsholm.github.io/react_assignement/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.2c70ca0b.chunk.js": "/staffanstromsholm.github.io/react_assignement/static/js/2.2c70ca0b.chunk.js",
-    "static/js/2.2c70ca0b.chunk.js.map": "/staffanstromsholm.github.io/react_assignement/static/js/2.2c70ca0b.chunk.js.map",
-    "index.html": "/staffanstromsholm.github.io/react_assignement/index.html",
-    "static/css/2.20aa2d7b.chunk.css.map": "/staffanstromsholm.github.io/react_assignement/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.1ebe780f.chunk.css.map": "/staffanstromsholm.github.io/react_assignement/static/css/main.1ebe780f.chunk.css.map",
-    "static/js/2.2c70ca0b.chunk.js.LICENSE.txt": "/staffanstromsholm.github.io/react_assignement/static/js/2.2c70ca0b.chunk.js.LICENSE.txt"
+    "main.css": "/react_assignement/static/css/main.1ebe780f.chunk.css",
+    "main.js": "/react_assignement/static/js/main.24f7e28c.chunk.js",
+    "main.js.map": "/react_assignement/static/js/main.24f7e28c.chunk.js.map",
+    "runtime-main.js": "/react_assignement/static/js/runtime-main.92cd4a8b.js",
+    "runtime-main.js.map": "/react_assignement/static/js/runtime-main.92cd4a8b.js.map",
+    "static/css/2.20aa2d7b.chunk.css": "/react_assignement/static/css/2.20aa2d7b.chunk.css",
+    "static/js/2.2c70ca0b.chunk.js": "/react_assignement/static/js/2.2c70ca0b.chunk.js",
+    "static/js/2.2c70ca0b.chunk.js.map": "/react_assignement/static/js/2.2c70ca0b.chunk.js.map",
+    "index.html": "/react_assignement/index.html",
+    "static/css/2.20aa2d7b.chunk.css.map": "/react_assignement/static/css/2.20aa2d7b.chunk.css.map",
+    "static/css/main.1ebe780f.chunk.css.map": "/react_assignement/static/css/main.1ebe780f.chunk.css.map",
+    "static/js/2.2c70ca0b.chunk.js.LICENSE.txt": "/react_assignement/static/js/2.2c70ca0b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.da3d1733.js",
+    "static/js/runtime-main.92cd4a8b.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.2c70ca0b.chunk.js",
     "static/css/main.1ebe780f.chunk.css",
