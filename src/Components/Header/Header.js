@@ -16,7 +16,7 @@ function Header({isLoggedIn, logoutHandler, loginHandler}) {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Link><Link to="/posts">Blogposts</Link></Nav.Link>
+                <Nav.Link href="/posts"><Link to="/posts">Blogposts</Link></Nav.Link>
                 {/* Conditional rendering */}
                 {isLoggedIn && <Nav.Link><Link to="/newpost">New Post</Link></Nav.Link>}
                 {isLoggedIn && <Nav.Link><Link onClick={logoutHandler}>Logout</Link></Nav.Link>}

@@ -14,7 +14,7 @@ const SinglePost = () => {
 
     useEffect(() => {
         axios.get(dbEndpoit)
-            .then(result => result.data.find(post => post.id == postID))
+            .then(result => result.data.find(post => post.id === {postID}))
             .then(result => setPost(result))
     }, []);
 

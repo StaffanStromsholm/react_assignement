@@ -9,9 +9,11 @@ import {
 } from 'react-router-dom';
 import './Aside.css';
 
+const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
+
 const Aside = () => {
     let {path, url} = useRouteMatch();
-    console.log(url);
+
     return (
         <div className="Aside">
             <Router>
@@ -44,45 +46,12 @@ const Year2021 = () => {
 
     let {path, url} = useRouteMatch();
 
+    const listOfMonths = months.map(month => <li key={month}><Link to={`${url}/${month}`}>{month}</Link></li>)
+
     return (<div>
         <h2>2021</h2>
         <ul>
-            <li>
-                <Link to={`${url}/jan`}>Jan</Link>
-            </li>
-            <li>
-                <Link to={`${url}/feb`}>Feb</Link>
-            </li>
-            <li>
-                <Link to={`${url}/mar`}>Mar</Link>
-            </li>
-            <li>
-                <Link to={`${url}/apr`}>Apr</Link>
-            </li>
-            <li>
-                <Link to={`${url}/may`}>May</Link>
-            </li>
-            <li>
-                <Link to={`${url}/jun`}>Jun</Link>
-            </li>
-            <li>
-                <Link to={`${url}/jul`}>Jul</Link>
-            </li>
-            <li>
-                <Link to={`${url}/aug`}>Aug</Link>
-            </li>
-            <li>
-                <Link to={`${url}/sep`}>Sep</Link>
-            </li>
-            <li>
-                <Link to={`${url}/okt`}>Okt</Link>
-            </li>
-            <li>
-                <Link to={`${url}/nov`}>Nov</Link>
-            </li>
-            <li>
-                <Link to={`${url}/dec`}>Dec</Link>
-            </li>
+        {listOfMonths}
         </ul>
 
         <hr></hr>
@@ -90,6 +59,28 @@ const Year2021 = () => {
         <Switch>
             <Route path={`${path}/:month`}>
                 <Month2021 />
+            </Route>
+        </Switch>
+    </div>);
+};
+
+const Year2020 = () => {
+
+    let { path, url } = useRouteMatch(); 
+
+    const listOfMonths = months.map(month => <li key={month}><Link to={`${url}/${month}`}>{month}</Link></li>)
+
+    return (<div>
+        <h2>2020</h2>
+        <ul>
+        {listOfMonths}
+        </ul>
+
+        <hr></hr>
+
+        <Switch>
+            <Route path={`${path}/:month`}>
+                <Month2020 />
             </Route>
         </Switch>
     </div>);
@@ -127,61 +118,6 @@ const Month2020 = () => {
             </ul>
         </div>
     );
-};
-
-const Year2020 = () => {
-
-    let { path, url } = useRouteMatch(); 
-
-    return (<div>
-        <h2>2020</h2>
-        <ul>
-            <li>
-                <Link to={`${url}/jan`}>Jan</Link>
-            </li>
-            <li>
-                <Link to={`${url}/feb`}>Feb</Link>
-            </li>
-            <li>
-                <Link to={`${url}/mar`}>Mar</Link>
-            </li>
-            <li>
-                <Link to={`${url}/apr`}>Apr</Link>
-            </li>
-            <li>
-                <Link to={`${url}/may`}>May</Link>
-            </li>
-            <li>
-                <Link to={`${url}/jun`}>Jun</Link>
-            </li>
-            <li>
-                <Link to={`${url}/jul`}>Jul</Link>
-            </li>
-            <li>
-                <Link to={`${url}/aug`}>Aug</Link>
-            </li>
-            <li>
-                <Link to={`${url}/sep`}>Sep</Link>
-            </li>
-            <li>
-                <Link to={`${url}/okt`}>Okt</Link>
-            </li>
-            <li>
-                <Link to={`${url}/nov`}>Nov</Link>
-            </li>
-            <li>
-                <Link to={`${url}/dec`}>Dec</Link>
-            </li>
-        </ul>
-
-        <hr></hr>
-
-        <Switch>
-            <Route path={`${path}/:month`}>
-                <Month2020 />
-            </Route>
-        </Switch>
-    </div>);
 };
 
 export default Aside;
