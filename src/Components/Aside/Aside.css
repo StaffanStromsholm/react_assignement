@@ -6,8 +6,8 @@
     font-size: 1rem;
     right: 0;
     top: 0;
-    background-color: rgb(75, 58, 8);
-    color: white;
+    background-color: rgb(227, 227, 227);
+    color: black;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -22,5 +22,5 @@
 }
 
 .Aside a {
-    color: white;
+    color: black;
 }
