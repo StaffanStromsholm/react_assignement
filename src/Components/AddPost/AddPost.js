@@ -31,7 +31,7 @@ function AddPost({ onChangeHandler, onSubmitHandler }) {
                 <Form.Control name="description" required onChange={onChangeHandler} as="textarea" rows={3} />
             </Form.Group>
             <Button variant="success" type="submit">Add</Button>
-            <Button variant="primary" className="new-post-back-btn" type="button"><Link to="/react_assignement/posts">Back</Link></Button>
+            <Button variant="primary" className="new-post-back-btn" type="button"><Link to="/posts">Back</Link></Button>
 
         </Form>
         

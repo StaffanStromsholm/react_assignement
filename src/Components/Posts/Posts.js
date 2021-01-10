@@ -14,14 +14,14 @@ const Posts = ({posts}) => {
 const createBlogCard = (p) => {
     return(
         <Card className="posts-card" key={p.id}>
-          <Link to={`react_assignement/post/${p.id}`}><Card.Img variant="top" src={p.imgUrl} /></Link>
+          <Link to={`/post/${p.id}`}><Card.Img variant="top" src={p.imgUrl} /></Link>
           <Card.Body>
             <Card.Title>{p.title}</Card.Title>
             <Card.Text>
               {/* truncate text */}
               {p.description.substring(0, 200)}...
             </Card.Text>
-            <Link className="read-more" to={`react_assignement/post/${p.id}`}>Read more</Link>
+            <Link className="read-more" to={`/post/${p.id}`}>Read more</Link>
           </Card.Body>
           <Card.Footer>
             <small className="text-muted">Posted by {p.author}</small>

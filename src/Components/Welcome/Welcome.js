@@ -55,7 +55,7 @@ const Welcome = ({ isLoggedIn, logoutHandler, loginHandler }) => {
                 {/* passing props */}
                 <Greeting isLoggedIn={isLoggedIn} />
                 {button}
-                {isLoggedIn && <Link to="react_assignement/posts"><button className="welcome-btn">Read Blogposts</button></Link>}
+                {isLoggedIn && <Link to="/posts"><button className="welcome-btn">Read Blogposts</button></Link>}
             </div>
         </div>
     );
