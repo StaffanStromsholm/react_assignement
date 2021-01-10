@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/staffanstromsholm.github.io/react_assignement/static/css/main.1ebe780f.chunk.css",
-    "main.js": "/staffanstromsholm.github.io/react_assignement/static/js/main.7ff0fffc.chunk.js",
-    "main.js.map": "/staffanstromsholm.github.io/react_assignement/static/js/main.7ff0fffc.chunk.js.map",
+    "main.js": "/staffanstromsholm.github.io/react_assignement/static/js/main.24f7e28c.chunk.js",
+    "main.js.map": "/staffanstromsholm.github.io/react_assignement/static/js/main.24f7e28c.chunk.js.map",
     "runtime-main.js": "/staffanstromsholm.github.io/react_assignement/static/js/runtime-main.da3d1733.js",
     "runtime-main.js.map": "/staffanstromsholm.github.io/react_assignement/static/js/runtime-main.da3d1733.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/staffanstromsholm.github.io/react_assignement/static/css/2.20aa2d7b.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.2c70ca0b.chunk.js",
     "static/css/main.1ebe780f.chunk.css",
-    "static/js/main.7ff0fffc.chunk.js"
+    "static/js/main.24f7e28c.chunk.js"
   ]
 }
