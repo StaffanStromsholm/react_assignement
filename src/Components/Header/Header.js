@@ -12,13 +12,13 @@ import { faParagraph } from '@fortawesome/free-solid-svg-icons';
 function Header({isLoggedIn, logoutHandler, loginHandler}) {
     return (
         <Navbar className="navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand><Link to="/"><FontAwesomeIcon icon={faParagraph} /></Link></Navbar.Brand>
+            <Navbar.Brand><Link to="/react_assignement"><FontAwesomeIcon icon={faParagraph} /></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Link><Link to="/posts">Blogposts</Link></Nav.Link>
+                <Nav.Link><Link to="/react_assignement/posts">Blogposts</Link></Nav.Link>
                 {/* Conditional rendering */}
-                {isLoggedIn && <Nav.Link><Link to="/newpost">New Post</Link></Nav.Link>}
+                {isLoggedIn && <Nav.Link><Link to="/react_assignement/newpost">New Post</Link></Nav.Link>}
                 {isLoggedIn && <Nav.Link><Link onClick={logoutHandler}>Logout</Link></Nav.Link>}
                 {!isLoggedIn && <Nav.Link><Link onClick={loginHandler}>Login</Link></Nav.Link>}
                 </Nav>

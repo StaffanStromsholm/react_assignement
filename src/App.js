@@ -67,18 +67,18 @@ const App = () => {
       <Header isLoggedIn={isLoggedIn} logoutHandler={setLoggedInToFalseHandler} loginHandler={setLoggedInToTrueHandler} />
 
       <Switch>
-      <Route exact path="/">
+      <Route exact path="/react_assignement">
       {/* passing functions as props to handle state from child component Welcome to parent Component App */}
         <Welcome logoutHandler={setLoggedInToFalseHandler} loginHandler={setLoggedInToTrueHandler} isLoggedIn={isLoggedIn} />
       </Route>
-        <Route path={`/post/:postID`}>
+        <Route path={`/react_assignement/post/:postID`}>
           <SinglePost />
         </Route>
-        <Route path="/posts" >
+        <Route path="/react_assignement/posts" >
           <Posts posts={posts} />
           <Aside />
         </Route>
-        <Route path="/newpost">
+        <Route path="/react_assignement/newpost">
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
