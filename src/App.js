@@ -80,7 +80,7 @@ const App = () => {
           <Posts posts={posts} />
           <Aside />
         </Route>
-        <Route path="/newpost">
+        <Route path="/newpost">x
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
