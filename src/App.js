@@ -8,6 +8,7 @@ import Header from './Components/Header/Header';
 import SinglePost from './Components/SinglePost/SinglePost.js';
 import Welcome from './Components/Welcome/Welcome';
 import Aside from './Components/Aside/Aside';
+import EditPost from './Components/EditPost/EditPost';
 
 // fetching data from fake json server hosted on my-json-server.typicode.com, posting to this db does not work, use localhost for that
 const DB = 'https://my-json-server.typicode.com/StaffanStromsholm/react-assignement-db/posts';
@@ -57,6 +58,12 @@ const App = () => {
       });
   };
 
+  const onSubmitHandlerEdit = (e) => {
+    e.preventDefault();
+    axios.put(DB, post)
+    .then(()=>axios.get(DB))
+  }
+
   const setLoggedInToFalseHandler = () => {
     setIsLoggedIn(false);
   };
@@ -78,11 +85,14 @@ const App = () => {
         <Route path={`/react_assignement/post/:postID`}>
           <SinglePost />
         </Route>
+        <Route path={`/react_assignement/editpost/:postID`}>
+          <EditPost onChangeHandler={onChangeHandler} onSubmitHandlerEdit={onSubmitHandlerEdit} />
+        </Route>
         <Route path={`/react_assignement/posts`} >
           <Posts posts={posts} />
           <Aside />
         </Route>
-        <Route path={`/react_assignement/newpost`}>x
+        <Route path={`/react_assignement/newpost`}>
           <AddPost onChangeHandler={onChangeHandler} onSubmitHandler={onSubmitHandler} />
         </Route>
       </Switch>
