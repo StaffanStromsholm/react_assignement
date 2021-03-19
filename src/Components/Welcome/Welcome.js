@@ -4,11 +4,11 @@ import './Welcome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LoggedInGreeting = ({ isLoggedIn }) => {
-    return <h1>Welcome Guest User!</h1>;
+    return <h1 className="rotate">Welcome Guest User!</h1>;
 }
 
 const NotLoggedInGreeting = ({ isLoggedIn }) => {
-    return <h1>Welcome! Please login.</h1>;
+    return <h1 className="rotate">Welcome! Please login.</h1>;
 }
 
 // Conditional rendering
